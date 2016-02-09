@@ -1,0 +1,13 @@
+#back-button { display: none !important; }
+#bookmarks-menu-button { display: none !important; }
+#forward-button { display: none !important; }
+#urlbar-go-button { display: none !important; }
+#urlbar-reload-button { display: none !important; }
+#urlbar-stop-button { display: none !important; }
+.autocomplete-history-dropmarker { display: none !important; }
+.close-icon { display: none !important; }
+.tabs-close-button { display: none !important; }
+.tabs-newtab-button { display: none !important; }
+.urlbar-history-dropmarker { display: none !important; }
+#PanelUI-button { display: none !important; }
+

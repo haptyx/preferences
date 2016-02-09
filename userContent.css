@@ -1,0 +1,49 @@
+a[href$='.pdf']:after {
+    font-size: smaller;
+    content: ' [pdf]'
+}
+
+@-moz-document url(about:newtab) {
+    body {
+        height: 0 !important;
+        :after {
+            content: "Hello"
+        }
+    }
+    #newtab-customize-overlay, .newtab-customize-panel-container,#newtab-intro-mask,#newtab-vertical-margin, #newtab-customize-button {
+        display: none !important;
+    }
+}
+
+@-moz-document domain(ycombinator.com) {
+    .votearrow, .sitebit.comhead, .yclinks, form, .subtext {
+        display: none !important;
+    }
+    .spacer {
+        height: 14px !important;
+    }
+}
+
+@-moz-document domain(umart.com.au) {
+    #bottom_one, #bottom_two1, .leftads, #menu, .position, .list_products h4 {
+        display: none !important;
+    }
+    #head {
+        height: 134px !important;
+    }
+    #head, #top {
+        background: none !important;
+    }
+}
+
+@-moz-document domain(google.com) {
+    #appbar.appbar, [id^='footc'], [id^='extra'], .g .action-menu, .g .crc, .g .osl, #prm, div[class*='promo'] {
+        display: none !important;
+    }
+}
+
+@-moz-document domain(stackoverflow.com) {
+    #newsletter-ad, .post-taglist, .post-menu, .post-form, .bottom-notice, #herobox, #hot-network-questions, #answers #tabs, #footer, #header #hmenus {
+        display: none !important;
+    }
+}
