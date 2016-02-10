@@ -126,7 +126,7 @@ user_pref('privacy.clearOnShutdown.history',true);
 user_pref('privacy.clearOnShutdown.offlineApps',true);
 user_pref('privacy.clearOnShutdown.passwords',true);
 user_pref('privacy.clearOnShutdown.sessions',true);
-user_pref('privacy.sanitize.sanitizeOnShutdown',true);
+user_pref('privacy.sanitize.sanitizeOnShutdown',false);
 user_pref('privacy.trackingprotection.enabled',true);
 user_pref('privacy.trackingprotection.pbmode.enabled',true);
 user_pref('security.OCSP.enabled',1);
