@@ -53,3 +53,12 @@ a[href$='.pdf']:after {
         display: none !important;
     }
 }
+
+@-moz-document domain(github.com) {
+    #your_repos .filter-repos.filter-bar, #your_repos .btn, #your_repos .counter, .js-notice, .site-footer-container, .protip, a.subscribe-feed {
+        display: none !important;
+    }
+    div.news.column.two-thirds {
+        margin-bottom: 1em !important;
+    }
+}
