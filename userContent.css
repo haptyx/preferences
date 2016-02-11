@@ -47,3 +47,9 @@ a[href$='.pdf']:after {
         display: none !important;
     }
 }
+
+@-moz-document domain(reddit.com) {
+    ul.tabmenu, div.side, #header-bottom-right ul.flat-list, #header-bottom-right span.separator, .expando-button, .arrow .up, .arrow .down, li.share, span.domain, .login-form-side, .footer-parent {
+        display: none !important;
+    }
+}
