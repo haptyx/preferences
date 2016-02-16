@@ -7,16 +7,13 @@ if &compatible
 endif
 
 """ Remap arrows
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
+map <Up> <NOP>
+map <Down> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>
 
-
+nnoremap j gj
+nnoremap k gk
 
 """ Display settings
 set wrap
@@ -32,6 +29,7 @@ set matchpairs+=<:>
 
 """ Editor settings
 set esckeys
+set autowrite
 set ignorecase
 set smartcase
 set smartindent
@@ -50,6 +48,7 @@ set wrapmargin=0
 set lazyredraw
 set confirm
 set nobackup
+set noswapfile
 set viminfo='20,\"500
 set hidden
 set history=100
@@ -61,5 +60,17 @@ if &t_Co > 2 || has("gui_running")
 	syntax on
 	set hlsearch
 	set incsearch
-	colors colorsbox-material
+	colors cake
 endif
+
+""" maps
+nmap <silent> <BS> :nohlsearch<CR>
+
+""" undo
+if has('persistent_undo')
+    set undolevels=5000
+    set undodir=$HOME/.vim/undo
+    set undofile
+endif
+
+cmap w!! w !sudo tee % >/dev/null
