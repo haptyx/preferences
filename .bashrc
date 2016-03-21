@@ -39,9 +39,9 @@ alias ls="ls --color"
 alias note="vim -c $ +put_ +startinsert ~/.notes.md"
 
 
-if [ -f ~/.xmodmap ]; then
-    xmodmap ~/.xmodmap
-fi
+#if [ -f ~/.xmodmap ]; then
+#    xmodmap ~/.xmodmap
+#fi
 
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return

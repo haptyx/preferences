@@ -49,7 +49,7 @@ a[href$='.pdf']:after {
 }
 
 @-moz-document domain(reddit.com) {
-    ul.tabmenu, div.side, #header-bottom-right ul.flat-list, #header-bottom-right span.separator, .expando-button, .arrow .up, .arrow .down, li.share, span.domain, .login-form-side, .footer-parent {
+    ul.flat-list a.give-gold, ul.flat-list a.reportbtn, ul.flat-list a.bylink, ul.tabmenu, div.side, #header-bottom-right ul.flat-list, #header-bottom-right span.separator, .expando-button, .arrow.up, .arrow.down, li.share, span.domain, .login-form-side, .footer-parent {
         display: none !important;
     }
 }
@@ -61,4 +61,10 @@ a[href$='.pdf']:after {
     div.news.column.two-thirds {
         margin-bottom: 1em !important;
     }
+}
+
+@-moz-document domain(macrumors.com) {
+    .follow-banner, #roundups, .ios-blog, .mac-blog, .search-form, .brand .utility, .article .footer .social, #right, #fContainer { display: none }
+.wrapper { margin: 0 !important;}
+* { border-radius: 0 !important;}
 }

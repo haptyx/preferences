@@ -1,22 +1,47 @@
 """ Custom .vimrc
 """ Author: haptyx
 
-" Reset to vim Defaults
-if &compatible
-  set nocompatible
-endif
+""" Set the leader key to space
+let mapleader = "\<space>"
 
-""" Remap arrows
-map <Up> <NOP>
-map <Down> <NOP>
-map <Left> <NOP>
-map <Right> <NOP>
+""" Null out a bunch of keys
+nnoremap <up> <NOP>
+inoremap <up> <NOP>
+nnoremap <down> <NOP>
+inoremap <down> <NOP>
+nnoremap <left> <NOP>
+inoremap <left> <NOP>
+nnoremap <right> <NOP>
+inoremap <right> <NOP>
+nnoremap <delete> <NOP>
 
 nnoremap j gj
 nnoremap k gk
 
+nnoremap n nzz
+vnoremap n nzz
+nnoremap N Nzz
+vnoremap N Nzz
+
+nmap <silent> <BS> :nohlsearch<CR>
+
+""" Convenience functions using leader
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :wq<cr>
+nnoremap <leader>a A
+nnoremap <leader>h ^i
+
+""" Invisible character settings
+set list
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:·,nbsp:·
+
+""" File behavior
+set autoread
+set autowrite
+
 """ Display settings
 set wrap
+set wrapscan
 set linebreak
 set number
 set showmatch
@@ -26,10 +51,10 @@ set ruler
 set title
 set matchtime=2
 set matchpairs+=<:>
+set lazyredraw
 
 """ Editor settings
 set esckeys
-set autowrite
 set ignorecase
 set smartcase
 set smartindent
@@ -40,7 +65,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nofoldenable
-set list listchars=tab:\ \ ,trail:·
 set textwidth=0
 set wrapmargin=0
 
@@ -63,14 +87,9 @@ if &t_Co > 2 || has("gui_running")
 	colors cake
 endif
 
-""" maps
-nmap <silent> <BS> :nohlsearch<CR>
-
 """ undo
 if has('persistent_undo')
     set undolevels=5000
     set undodir=$HOME/.vim/undo
     set undofile
 endif
-
-cmap w!! w !sudo tee % >/dev/null
